@@ -1,0 +1,93 @@
+#GLOBAL CONSTANT FOR CONVERSION
+MILES_TO_KILOMETERS = 1.6
+POUNDS_TO_KILO = 0.45
+INCHES_TO_CENTIMETERS = 2.54
+GALLONS_TO_LITERS = 3.9
+
+#MAIN DEF
+def main():
+	"This is main function"
+	
+	print("\n*** CONVERSION FROM MILES TO KILOMETERS ***")
+	#LOCAL VARIABLES
+	mymiles = 0.0  #VARIABLE TO HOLD DISTANCE IN MILES
+	#GET DISTANCE IN MILES 
+	mymiles = float(input("Enter the distance in miles : "))
+	#milesToKilometers()FUNCTION ACCEPTS THE MILES AS ARGS AND PRINTS EQUIVALENT KILOMETERS
+	milesToKilometers(mymiles)	
+	
+	
+	print("\n*** CONVERSION FROM FAHRENHEIT TO CELCIUS ***")
+	#LOCAL VARIABLES
+	myfahrenheit = 0.0  #VARIABLE TO HOLD TEMPERATURE IN FAHRENHEIT
+	#GET TEMPERATURE IN FAHRENHEIT 
+	myfahrenheit = float(input("Enter the temperature in fahrenheit : "))
+	#fahrenheitToCelsius()FUNCTION ACCEPTS THE FAHRENHEIT AS ARGS AND PRINTS EQUIVALENT CELSIUS
+	fahrenheitToCelsius(myfahrenheit)	
+
+	
+	print("\n*** CONVERSION FROM GALLONS TO LITERS ***")
+	#LOCAL VARIABLES
+	mygallons = 0.0  #VARIABLE TO HOLD QUANTITY IN GALLONS
+	#GET QUANTITY IN GALLONS
+	mygallons = float(input("Enter the quantity in gallons : "))
+	#gallonsToLiters FUNCTION ACCEPTS THE GALLONS AS ARGS AND PRINTS EQUIVALENT LITERS
+	gallonsToLiters(mygallons) 	
+	
+	
+	print("\n*** CONVERSION FROM POUNDS TO KILOGRAMS ***")
+	#LOCAL VARIABLES
+	mypounds = 0.0  #VARIABLE TO HOLD WEIGHT IN POUNDS
+	#GET WEIGTH IN POUNDS
+	mypounds = float(input("Enter the weight in pounds : "))
+	#poundsToKilograms FUNCTION ACCEPTS THE POUNDS AS ARGS AND PRINTS EQUIVALENT KILOGRAMS
+	poundsToKilograms(mypounds) 
+		
+		
+	print("\n*** CONVERSION FROM INCHES TO CENTIMETERS ***")
+	#LOCAL VARIABLES
+	myinches = 0.0  #VARIABLE TO HOLD LENGTH IN INCHES
+	#GET LENGTH IN INCHES
+	myinches = float(input("Enter the length in inches : "))
+	#inchesToCentimeters FUNCTION ACCEPTS THE INCHES AS ARGS AND PRINTS EQUIVALENT CENTIMETERS
+	inchesToCentimeters(myinches)								 
+
+#FUNCTION DEFINITIONS 
+
+def milesToKilometers(miles):
+	"This function converts distance in miles to kilometers"
+	#DECLARE LOCAL VARIABLES
+	kilometers = 0.0
+	kilometers = miles * MILES_TO_KILOMETERS
+	print(format(miles,'.2f'),"Miles ---->",format(kilometers,'.2f'),"Kilometers")
+
+def fahrenheitToCelsius(fahrenheit):
+	"This functions converts temperature from Fahrenheit to Celsius"
+	#DECLARE LOCAL VARIABLES
+	celsius = 0.0
+	celsius = (fahrenheit - 32) * 5/9
+	print(fahrenheit,"Degree Fahrenheit ----->",format(celsius,'.2f'),"Degree Celsius")
+
+def gallonsToLiters(gallons):
+	"This function converts volume from gallons to liters"
+	#DECLARE LOCAL VARIABELS
+	liters = 0.0
+	liters = gallons * GALLONS_TO_LITERS
+	print(format(gallons,'.2f'),"Gallons -----> ",format(liters,'.2f'),"Liters")								 
+								 
+def poundsToKilograms(pounds):
+	"This function converts quantity in pounds to kilograms"
+	#DECLARE LOCAL VARIABLES
+	kilograms = 0.0
+	kilograms = pounds * POUNDS_TO_KILO
+	print(format(pounds,'.2f'),"Pounds -----> ",format(kilograms,'.2f'),"Kilograms")
+	
+def inchesToCentimeters(inches):
+	"This function converts length in inches to centimeters"
+	#DECLARE LOCAL VARIABLES
+	centimeters = 0.0
+	centimeters = inches * INCHES_TO_CENTIMETERS
+	print(format(inches,'.2f'),"Inches -----> ",format(centimeters,'.2f'),"Centimeters")
+
+#Call main function
+main()	
